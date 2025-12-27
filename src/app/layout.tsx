@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/context/ThemeContext";
 import Sidebar from "@/components/Sidebar/Sidebar";
+import { Analytics } from "@vercel/analytics/react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,6 +19,26 @@ export const metadata: Metadata = {
   title: "FeelSnack - Your Cozy AI Companion",
   description: "A warm, friendly AI platform to help you find comfort, peace, and joy. Let us be your companion through difficult moments.",
   keywords: ["mental health", "AI companion", "wellness", "comfort", "relaxation", "mindfulness"],
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
+  openGraph: {
+    title: "FeelSnack - Your Cozy AI Companion",
+    description: "A warm, friendly AI platform to help you find comfort, peace, and joy.",
+    type: "website",
+    locale: "en_US",
+    siteName: "FeelSnack",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FeelSnack - Your Cozy AI Companion",
+    description: "A warm, friendly AI platform to help you find comfort, peace, and joy.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -38,7 +59,9 @@ export default function RootLayout({
             </main>
           </div>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
 }
+

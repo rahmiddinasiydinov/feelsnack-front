@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <defs>
+    <linearGradient id="faviconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8849a"/>
+      <stop offset="100%" stop-color="#ce93d8"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="16" cy="16" r="15" fill="url(#faviconGradient)"/>
+  
+  <!-- Heart icon -->
+  <path d="M16 24C16 24 24 18.5 24 12.5C24 9.5 21.5 7 18.5 7C17 7 15.6 7.8 14.8 9C14 7.8 12.6 7 11.1 7C8.1 7 5.6 9.5 5.6 12.5C5.6 18.5 14 24 16 24Z" 
+        transform="translate(0.4, 0.5)"
+        fill="white"/>
+  
+  <!-- Subtle inner glow on heart -->
+  <path d="M12 12C12 10 13.5 8.5 15.5 8.5C16.3 8.5 17 8.8 17.5 9.3" 
+        transform="translate(0.4, 0.5)"
+        stroke="rgba(232, 132, 154, 0.4)" 
+        stroke-width="1.2" 
+        stroke-linecap="round" 
+        fill="none"/>
+</svg>

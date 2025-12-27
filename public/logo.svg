@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
+  <defs>
+    <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8849a"/>
+      <stop offset="100%" stop-color="#ce93d8"/>
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e8849a"/>
+      <stop offset="100%" stop-color="#ce93d8"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Logo Icon - Heart with gentle curves -->
+  <g transform="translate(5, 5)">
+    <!-- Outer glow effect -->
+    <path d="M25 45C25 45 45 32 45 20C45 12 39 6 31 6C26 6 22 9 20 13C18 9 14 6 9 6C1 6 -5 12 -5 20C-5 32 15 45 25 45Z" 
+          transform="translate(5, 2)" 
+          fill="url(#heartGradient)" 
+          opacity="0.2"
+          filter="blur(4px)"/>
+    
+    <!-- Main heart -->
+    <path d="M25 42C25 42 43 30 43 19C43 12 38 7 31 7C26.5 7 22.5 9.5 20.5 13C18.5 9.5 14.5 7 10 7C3 7 -2 12 -2 19C-2 30 16 42 25 42Z" 
+          transform="translate(5, 3)" 
+          fill="url(#heartGradient)"/>
+    
+    <!-- Inner highlight -->
+    <path d="M18 18C18 14 21 11 25 11C27 11 28.5 11.8 29.5 13" 
+          transform="translate(5, 3)" 
+          stroke="white" 
+          stroke-width="2" 
+          stroke-linecap="round" 
+          fill="none" 
+          opacity="0.6"/>
+    
+    <!-- Sparkle accent -->
+    <circle cx="48" cy="12" r="2" fill="#ce93d8" opacity="0.8"/>
+    <circle cx="52" cy="8" r="1.2" fill="#e8849a" opacity="0.6"/>
+  </g>
+  
+  <!-- Text: FeelSnack -->
+  <text x="62" y="40" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="26" font-weight="700" fill="url(#textGradient)">
+    Feel<tspan fill="#4a3f3f" font-weight="600">Snack</tspan>
+  </text>
+  
+  <!-- Tagline -->
+  <text x="62" y="54" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#7a6b6b" letter-spacing="0.5">
+    Your cozy AI companion
+  </text>
+</svg>
