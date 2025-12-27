@@ -1,0 +1,333 @@
+@import "tailwindcss";
+
+/* ========================================
+   FeelSnack Design System
+   A warm, comforting design for healing
+   ======================================== */
+
+:root {
+  /* Light Mode - Warm Pink Theme */
+  --background: #fef7f7;
+  --background-secondary: #fff5f5;
+  --foreground: #4a3f3f;
+  --foreground-muted: #7a6b6b;
+  
+  /* Primary - Warm Rose Pink */
+  --primary: #e8849a;
+  --primary-hover: #dc6b84;
+  --primary-light: #fce4ec;
+  --primary-soft: #f8bbd9;
+  
+  /* Secondary - Soft Peach */
+  --secondary: #ffab91;
+  --secondary-hover: #ff8a65;
+  --secondary-light: #ffeee8;
+  
+  /* Accent - Gentle Lavender */
+  --accent: #ce93d8;
+  --accent-hover: #ba68c8;
+  --accent-light: #f3e5f5;
+  
+  /* Surface colors */
+  --surface: #ffffff;
+  --surface-hover: #fff0f3;
+  --surface-elevated: #ffffff;
+  
+  /* Borders */
+  --border: #f5d5dc;
+  --border-light: #fce8ec;
+  
+  /* Sidebar */
+  --sidebar-bg: #ffffff;
+  --sidebar-hover: #fff0f3;
+  --sidebar-active: #fce4ec;
+  --sidebar-border: #f5d5dc;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(232, 132, 154, 0.05);
+  --shadow-md: 0 4px 12px rgba(232, 132, 154, 0.1);
+  --shadow-lg: 0 8px 24px rgba(232, 132, 154, 0.15);
+  --shadow-glow: 0 0 20px rgba(232, 132, 154, 0.2);
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #e8849a 0%, #f8bbd9 100%);
+  --gradient-warm: linear-gradient(135deg, #fce4ec 0%, #fff5f5 100%);
+  --gradient-hero: linear-gradient(180deg, #fff5f5 0%, #fce4ec 50%, #f3e5f5 100%);
+}
+
+/* Dark Mode - Cozy Plum & Amber Theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1a1218;
+    --background-secondary: #231a20;
+    --foreground: #f5e6ea;
+    --foreground-muted: #b8a3aa;
+    
+    /* Primary - Deep Rose */
+    --primary: #e8849a;
+    --primary-hover: #f299ae;
+    --primary-light: #3d2a32;
+    --primary-soft: #4a2f3a;
+    
+    /* Secondary - Warm Amber */
+    --secondary: #ffb74d;
+    --secondary-hover: #ffc77d;
+    --secondary-light: #3d3020;
+    
+    /* Accent - Soft Mauve */
+    --accent: #ce93d8;
+    --accent-hover: #e1bee7;
+    --accent-light: #2d1f32;
+    
+    /* Surface colors */
+    --surface: #251c22;
+    --surface-hover: #2f252b;
+    --surface-elevated: #2a2026;
+    
+    /* Borders */
+    --border: #3d2f35;
+    --border-light: #4a3a42;
+    
+    /* Sidebar */
+    --sidebar-bg: #1f171c;
+    --sidebar-hover: #2f252b;
+    --sidebar-active: #3d2a32;
+    --sidebar-border: #3d2f35;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
+    --shadow-glow: 0 0 30px rgba(232, 132, 154, 0.15);
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #e8849a 0%, #ce93d8 100%);
+    --gradient-warm: linear-gradient(135deg, #251c22 0%, #2a2026 100%);
+    --gradient-hero: linear-gradient(180deg, #1a1218 0%, #251c22 50%, #2d1f32 100%);
+  }
+}
+
+/* Manual theme classes for toggle */
+.light {
+  --background: #fef7f7;
+  --background-secondary: #fff5f5;
+  --foreground: #4a3f3f;
+  --foreground-muted: #7a6b6b;
+  --primary: #e8849a;
+  --primary-hover: #dc6b84;
+  --primary-light: #fce4ec;
+  --primary-soft: #f8bbd9;
+  --secondary: #ffab91;
+  --secondary-hover: #ff8a65;
+  --secondary-light: #ffeee8;
+  --accent: #ce93d8;
+  --accent-hover: #ba68c8;
+  --accent-light: #f3e5f5;
+  --surface: #ffffff;
+  --surface-hover: #fff0f3;
+  --surface-elevated: #ffffff;
+  --border: #f5d5dc;
+  --border-light: #fce8ec;
+  --sidebar-bg: #ffffff;
+  --sidebar-hover: #fff0f3;
+  --sidebar-active: #fce4ec;
+  --sidebar-border: #f5d5dc;
+  --shadow-sm: 0 1px 2px rgba(232, 132, 154, 0.05);
+  --shadow-md: 0 4px 12px rgba(232, 132, 154, 0.1);
+  --shadow-lg: 0 8px 24px rgba(232, 132, 154, 0.15);
+  --shadow-glow: 0 0 20px rgba(232, 132, 154, 0.2);
+  --gradient-primary: linear-gradient(135deg, #e8849a 0%, #f8bbd9 100%);
+  --gradient-warm: linear-gradient(135deg, #fce4ec 0%, #fff5f5 100%);
+  --gradient-hero: linear-gradient(180deg, #fff5f5 0%, #fce4ec 50%, #f3e5f5 100%);
+}
+
+.dark {
+  --background: #1a1218;
+  --background-secondary: #231a20;
+  --foreground: #f5e6ea;
+  --foreground-muted: #b8a3aa;
+  --primary: #e8849a;
+  --primary-hover: #f299ae;
+  --primary-light: #3d2a32;
+  --primary-soft: #4a2f3a;
+  --secondary: #ffb74d;
+  --secondary-hover: #ffc77d;
+  --secondary-light: #3d3020;
+  --accent: #ce93d8;
+  --accent-hover: #e1bee7;
+  --accent-light: #2d1f32;
+  --surface: #251c22;
+  --surface-hover: #2f252b;
+  --surface-elevated: #2a2026;
+  --border: #3d2f35;
+  --border-light: #4a3a42;
+  --sidebar-bg: #1f171c;
+  --sidebar-hover: #2f252b;
+  --sidebar-active: #3d2a32;
+  --sidebar-border: #3d2f35;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 30px rgba(232, 132, 154, 0.15);
+  --gradient-primary: linear-gradient(135deg, #e8849a 0%, #ce93d8 100%);
+  --gradient-warm: linear-gradient(135deg, #251c22 0%, #2a2026 100%);
+  --gradient-hero: linear-gradient(180deg, #1a1218 0%, #251c22 50%, #2d1f32 100%);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
+  --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-light: var(--primary-light);
+  --color-primary-soft: var(--primary-soft);
+  --color-secondary: var(--secondary);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-secondary-light: var(--secondary-light);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-light: var(--accent-light);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-border: var(--border);
+  --color-border-light: var(--border-light);
+  --color-sidebar-bg: var(--sidebar-bg);
+  --color-sidebar-hover: var(--sidebar-hover);
+  --color-sidebar-active: var(--sidebar-active);
+  --color-sidebar-border: var(--sidebar-border);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-soft);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Selection */
+::selection {
+  background: var(--primary-light);
+  color: var(--foreground);
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Smooth transitions for interactive elements */
+button, a, input, textarea {
+  transition: all 0.2s ease;
+}
+
+/* Utility animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { 
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { 
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.8;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: var(--shadow-glow); }
+  50% { box-shadow: 0 0 40px rgba(232, 132, 154, 0.3); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.5s ease forwards;
+}
+
+.animate-slide-in-up {
+  animation: slideInUp 0.5s ease forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* Stagger animations */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
